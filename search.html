@@ -145,8 +145,8 @@
 
             $(this).attr("disabled", true);
             var $strurl="" ;
-            //var searchurl = "http://www.12365.cm/fwqueryjson.ashx?callback=?";
-            var searchurl = "search.php";
+            var searchurl = "http://www.12365.cm/fwqueryjson.ashx?callback=?";
+            //var searchurl = "search.php";
             $.getJSON(searchurl,{ FwCode: $FwCode.val() },function(data) {
 
               	//alert(data.CodeState);  //CodeState 为查询状况：0 错误 1 正确; 2 重复  
