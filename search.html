@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>防伪码查询</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="天灵宝燕，燕窝" />
+<meta name="Description" content="天灵宝燕，我们的产品理念，坚持使用原生态无污染的高级燕盏材料，确保每一盏都经过显微镜纯手工三挑三选古法挑毛工序，科学配比各营养成分保证每一瓶燕窝含量高达25%以上，拒绝制作过程使用添加剂，保证每一个成品都经过生产线超高温灭菌、全数控精准蒸煮，采用真空灌装，达到无菌标准，用心做出0添加承诺可以在常温保存的好吃燕窝">
+<!-- Custom Theme files -->
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="css/style.css" type="text/css" rel="stylesheet" media="all">  
+<link href="css/font-awesome.css" rel="stylesheet">   <!-- font-awesome icons --> 
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" /> 
+<link rel="stylesheet" href="css/lightbox.css">  <!-- light-box -->
+<link href="images/logo.png" rel="shortcut icon">
+<!-- //Custom Theme files -->    
+<!-- web-fonts -->    
+<link href="http://fonts.googleapis.com/css?family=Tulpen+One" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<style type="text/css">
+    
+	h3.w3title-agile {
+	    color: #c59474;
+	    font-size: 1.5rem;
+	    margin-bottom: 0.6em;
+	    text-align: center;
+	    text-transform: capitalize;
+	    letter-spacing: 4px;
+	    letter-spacing:0px;
+	} 
+	.wap{
+		color: #c59474;
+		font-size: 2.5rem;
+	}
+
+	.header {
+	   background-color: #fff;
+	}
+	.navbar-default .navbar-toggle .icon-bar {
+	    background-color: #c59474;
+	}
+	.navbar-default .navbar-toggle {
+	    border-color: #c59474;
+		margin: 2.4em 1em;
+	}
+	.welcome-img{
+		border: 0px;
+	}
+
+	@media only screen and (min-width: 1029px){
+		h3.w3title-agile {
+		    font-size: 3rem;
+		} 
+	}
+	@media only screen and (min-width: 1029px){
+		.wap {
+		    font-size: 5rem;
+		} 
+	}
+</style>
+<!-- //web-fonts -->  
+</head>
+<body> 
+	<!-- header -->
+	<div id="home" class="header">
+		<div class="container" style="height: 60px">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header" style="height: 60px">
+					  <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top: 15px">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button> -->
+						<div class="logo" style="width: 55px">
+							<img src="/images/logo.png" height="55px" style=" margin-top: 2px">
+						</div>
+					</div> 
+					<!-- <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1" style="background-color: #fff;">
+					 <ul class="nav navbar-nav">
+						<li class="hvr-sweep-to-bottom active"><a href="index.html">首页</a></li>
+						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#about" class="scroll">产品视频</a></li>
+						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#welcome" class="scroll">品牌介绍</a></li>
+						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#services" class="scroll">产品简介</a></li>
+						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#gallery" class="scroll">关注我们</a></li> 
+						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#contact" class="scroll">防伪查询</a></li>
+					  </ul>
+					</div> -->
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div id="contact" class="subscribe">
+		<div class="container">
+			<h3 class="w3title-agile2 wap">防伪查询</h3>
+			<p id="ReturnResult" style="font-size: 14px;height: 100px; padding-top: 15px"></p>
+			<!-- <div id="ReturnResult" style="font-size: 12px"> -->
+			<form onsubmit="return search();">
+				<input type="number" name="email" id="FwCode" placeholder="请输入10-24位防伪码查询" class="user" required="" style="border: 1px #ccc solid">
+				<input type="submit" id="btnQuery" value="马上查询">
+			</form>
+			<!-- <p class="spam">Copyright &copy; 2018.Company name All rights</p> -->
+		</div>
+
+	</div>
+	<p class="spam" style="text-align: center;position: fixed; bottom: 10px; width: 100%;">Copyright &copy; 2018. All rights  <a href="http://www.miitbeian.gov.cn">粤ICP备18016350号-1</a></p>
+	
+	<!-- //modal-about -->     
+	<!-- js --> 
+	<script src="js/jquery-2.2.3.min.js"></script>
+	
+	<!-- //end-smooth-scrolling -->	
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			
+		});
+		function search(){
+			var $FwCode = $("#FwCode");
+			var $CheckResult = $("#ReturnResult");
+            var RegNumber = /^[0-9]*[1-9][0-9]*$/;
+            var flag = false;
+            $CheckResult.html("");
+            if ($FwCode.val().length == 0) {
+                $CheckResult.html("防伪码不能为空");
+                $FwCode.focus();
+                return false;
+            }else if ($FwCode.val().length < 10) {
+               $CheckResult.html("防伪码长度不能少于10位");	 
+               $FwCode.focus();
+               return false;
+            }else if ($FwCode.val().length > 24) {
+               $CheckResult.html("防伪码长度不能大于24位");
+               $FwCode.focus();
+               return false;
+            }else if (!RegNumber.test($FwCode.val())) {
+               $CheckResult.html("您输入的防伪码不是数字");
+               $FwCode.focus();
+               return false;
+            }
+           			
+            $CheckResult.html("正在查询......");
+
+            $(this).attr("disabled", true);
+            var $strurl="" ;
+            var searchurl = "http://www.12365.cm/fwqueryjson.ashx?callback=?";
+            //var searchurl = "search.php";
+            $.getJSON(searchurl,{ FwCode: $FwCode.val() },function(data) {
+
+              	//alert(data.CodeState);  //CodeState 为查询状况：0 错误 1 正确; 2 重复  
+
+             	//alert(data.QueryResult) ;   //QueryResult 查询结果 
+             	console.log(data);
+             	if (('code' in data) && data.code==1) {
+             		$CheckResult.html(data.msg);
+             	}else{
+             		$CheckResult.html(data.QueryResult);
+             	}
+                setTimeout(btnEnabled, 2000);
+            });
+			return false;
+		}
+		function btnEnabled() {
+            $("#btnQuery").attr("disabled", false);
+        }
+	</script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
