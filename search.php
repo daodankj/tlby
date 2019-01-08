@@ -1,6 +1,6 @@
 <?php
 header("Content-type:text/html;charset=utf-8");
-$code = $_GET['FwCode'];
+/*$code = $_GET['FwCode'];
 $info = file_get_contents('http://www.12365.cm/fwqueryjson.ashx?FwCode='.$code);
 //$info = trim($info,'(');
 //$info = trim($info,')');
@@ -15,7 +15,7 @@ $return = [
 	'code' => 1,
 	'msg' => $msg
 ];
-echo json_encode($return);
+echo json_encode($return);*/
 /*if (strpos($info,'防伪已经被冻结')) {
 	$return = [
 		'code' => -1,
@@ -25,3 +25,13 @@ echo json_encode($return);
 }else{
 	echo $info;
 }*/
+$code = $_GET['FwCode'];
+$s = file_get_contents('http://www.12365.cm/fwqueryjson.ashx?FwCode='.$code);
+$s = trim($s,'(');
+$s = trim($s,')');
+$info = json_decode($s,true);
+$return = [
+	'code' => $info['CodeState'],
+	'msg' => $info['QueryResult']
+];
+echo json_encode($return);
