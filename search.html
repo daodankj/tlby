@@ -153,11 +153,12 @@
 
              	//alert(data.QueryResult) ;   //QueryResult 查询结果 
              	console.log(data);
-             	if (('code' in data) && data.code==1) {
+             	/*if (('code' in data) && data.code==1) {
              		$CheckResult.html(data.msg);
              	}else{
              		$CheckResult.html(data.QueryResult);
-             	}
+             	}*/
+             	$CheckResult.html(data.msg);
                 setTimeout(btnEnabled, 2000);
             });
 			return false;
