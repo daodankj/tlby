@@ -29,6 +29,8 @@ $code = $_GET['FwCode'];
 $s = file_get_contents('http://www.12365.cm/fwqueryjson.ashx?FwCode='.$code);
 $s = trim($s,'(');
 $s = trim($s,')');
+$s = str_replace("
+            ", '', $s);//脑残的第三方接口偶尔查询会返回一些看不到的字符，导致解析不了，所以替换掉
 $info = json_decode($s,true);
 $return = [
 	'code' => $info['CodeState'],
