@@ -388,7 +388,7 @@ $signPackage = $jssdk->GetSignPackage();
     	wx.config({
 		    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		    appId: '<?php echo $signPackage["appId"];?>',
-		    timestamp: <?php echo $signPackage["timestamp"];?>,
+		    timestamp: '<?php echo $signPackage["timestamp"];?>',
 		    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
 		    signature: '<?php echo $signPackage["signature"];?>',
 		    jsApiList: [
@@ -405,7 +405,7 @@ $signPackage = $jssdk->GetSignPackage();
 		        success: function () {
 		          // 设置成功
 		        }
-		    }),
+		    });
 		    wx.updateTimelineShareData({ //分享朋友圈
 		        title: '天灵宝燕', // 分享标题
 		        link: 'http://www.tlbyyw.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
