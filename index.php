@@ -399,7 +399,7 @@ $signPackage = $jssdk->GetSignPackage();
 		wx.ready(function () {   //需在用户可能点击分享按钮前就先调用
 		    wx.updateAppMessageShareData({ //分享给朋友
 		        title: '天灵宝燕', // 分享标题
-		        desc: '天灵宝燕官网', // 分享描述
+		        desc: '龄秘鲜炖燕窝。即食燕窝，轻拧瓶盖，即可享受，营养美味，养颜更养人', // 分享描述
 		        link: 'http://www.tlbyyw.com', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
 		        imgUrl: 'http://www.tlbyyw.com/sharelogo.png', // 分享图标
 		        success: function () {
