@@ -386,7 +386,7 @@ $signPackage = $jssdk->GetSignPackage();
     <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
     <script>
     	wx.config({
-		    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		    appId: '<?php echo $signPackage["appId"];?>',
 		    timestamp: <?php echo $signPackage["timestamp"];?>,
 		    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
