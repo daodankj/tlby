@@ -6,10 +6,10 @@ $signPackage = $jssdk->GetSignPackage();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>天灵宝燕</title>
+<title>天灵宝燕官网 吃即食燕窝，找天灵宝燕</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="天灵宝燕，燕窝" />
+<meta name="keywords" content="天灵宝燕官网 吃即食燕窝，找天灵宝燕，天灵宝燕，燕窝" />
 <meta name="Description" content="天灵宝燕，我们的产品理念，坚持使用原生态无污染的高级燕盏材料，确保每一盏都经过显微镜纯手工三挑三选古法挑毛工序，科学配比各营养成分保证每一瓶燕窝含量高达25%以上，拒绝制作过程使用添加剂，保证每一个成品都经过生产线超高温灭菌、全数控精准蒸煮，采用真空灌装，达到无菌标准，用心做出0添加承诺可以在常温保存的好吃燕窝">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
