@@ -1,7 +1,8 @@
 body{
 	margin:0;
 	font-family: 'Roboto Condensed', sans-serif;
-	background: #fff;  
+    background: #fff;  
+    overflow-x: hidden;
 }
 body a{
 	transition: 0.5s all;
@@ -23,6 +24,8 @@ ul,label{
 	margin:0;
 	padding:0;
 }
+
+ul li{list-style: none;}
 body a:hover,body a:focus{
 	text-decoration:none;
 	outline: none;
@@ -70,7 +73,7 @@ body a:hover,body a:focus{
     font-style: normal;
 }
 .navbar-nav {
-    float: right;
+   margin-left: 5em;
 }
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border: none;
@@ -83,14 +86,13 @@ body a:hover,body a:focus{
 .tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 	color:#fff;
-	background:#c59474;
+	background:rgba(183,136,103,1);
 }
 .header {
    background-color: #1b1c1d;
 }
 .navbar-default .navbar-nav > li > a {
     color: #fff; 
-	font-size: 1.2em;
     font-weight: 300;
     letter-spacing: 1px;
 }
@@ -98,7 +100,10 @@ body a:hover,body a:focus{
     margin-bottom: 0;
 }
 .header-nav .nav > li > a {
-    padding: 20px 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-weight: 500;
 } 
 /* Sweep To Bottom */
 .hvr-sweep-to-bottom {
@@ -153,27 +158,27 @@ body a:hover,body a:focus{
 .hvr-sweep-to-bottom:hover, .hvr-sweep-to-bottom:focus, .hvr-sweep-to-bottom:active {
 	color:#fff;
 }
-.hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
+/* .hvr-sweep-to-bottom:hover:before, .hvr-sweep-to-bottom:focus:before, .hvr-sweep-to-bottom:active:before {
 	-webkit-transform: scaleY(1);
 	-moz-transform: scaleY(1);
 	-o-transform: scaleY(1);
 	-ms-transform: scaleY(1);
 	transform: scaleY(1);
-}
+} */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #fff;
+    border-bottom: 2px #fff solid;
 }
 /*-- //header --*/
 /*-- banner --*/
 .banner {
-    background-image: url("../images/overlay.png"),url(../images/bg.jpg);
+    /* background-image: url("../images/overlay.png"),url(../images/bg.jpg);
     background-repeat: repeat, no-repeat;
-    background-size: 1px, cover;
+    background-size: 1px, cover; */
     font-weight: 300;
 	background-position:center bottom;
 }
 .banner-text {
-    padding: 15em 0;
     text-align: center;
 }
 .banner-text h5 {
@@ -208,10 +213,15 @@ body a:hover,body a:focus{
 .banner-text h4 span.glyphicon {
     font-size: 0.8em;
 }
+
+.contact{
+    background-color: rgba(246,247,251,1);
+    margin-top: 135px;
+}
 /*-- //banner --*/
 /*-- welcome --*/
 .welcome,.about,.services,.news,.gallery,.testimonials,.subscribe,.contact{
-	padding:5em 0;
+	padding-top:5em;
 }
 h3.w3title-agile {
     color: #f44336;
@@ -529,6 +539,49 @@ img.img-responsive {
 .srvs-slider-w3info .flex-control-nav {
     display: block;
     bottom: -34%;
+}
+
+.container .leftBox,.container .rightBox{
+    width: 46%;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container .leftBox{
+    border-right:1px solid  rgba(217,217,217,1);
+    margin-right: 85px;
+    font-size: 20px;
+}
+
+.container .rightBox li{
+    display: inline-block;
+    margin-right: 55px;
+}
+
+.container .rightBox li:last-of-type{
+    margin-right: 0;
+}
+
+.contact .leftBox ul{
+    text-align: left;
+}
+
+.contact .taobao{
+    text-align: center;
+    font-size:24px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(183,136,103,1);
+    margin-bottom: 50px;
+}
+
+.contact .taobao a{
+    color:rgba(183,136,103,1);
+}
+
+.contact .taobao a img{
+    margin-right: 8px;
 }
 /*-- //services --*/
 /*-- gallery --*/
@@ -968,6 +1021,7 @@ ul.foo-nav li a:hover {
 	width: 318px;
 	left: 5%;
 }
+
 }
 @media(max-width:1366px){
 .w3captn-agileits {
@@ -986,7 +1040,7 @@ ul.foo-nav li a:hover {
 }
 @media(max-width:1280px){
 .banner-text {
-    padding: 13em 0; 
+ 
 }
 .w3captn-agileits {
 	width: 280px;
@@ -1011,7 +1065,7 @@ h3.w3title-agile {
 	margin: 0 auto;
 }
 .welcome, .about, .services, .news, .gallery, .testimonials, .subscribe, .contact {
-    padding: 4em 0;
+    padding-top: 4em;
 } 
 .map iframe { 
     height: 400px; 
@@ -1056,6 +1110,11 @@ h3.w3title-agile {
     float: none;
     width: 100%;
 }
+.contact .leftBox,.contact .rightBox{
+    width:45%;
+    border:none;
+}
+
 .content-mid-img,.content-mid-img1 { 
     min-height: 370px;
 }
@@ -1099,6 +1158,10 @@ h3.w3title-agile {
 .content-mid2 {
     padding: 3em 5em 3.5em; 
 }
+.contact .leftBox,.contact .rightBox{
+    width:100%;
+    border:none;
+}
 }
 @media(max-width:991px){
 .navbar-brand { 
@@ -1109,7 +1172,6 @@ h3.w3title-agile {
     height: 45px; 
 }
 .header-nav .nav > li > a {
-    padding: 44px 15px;
     font-size: 1.1em;
 }
 .w3captn-agileits {
@@ -1123,13 +1185,13 @@ h3.w3title-agile {
     font-size: 4em;
 }
 .banner-text {
-    padding: 11em 0;
+ 
 }
 .banner-text h4 {
     font-size: 2.2em; 
 }
 .welcome, .about, .services, .news, .gallery, .testimonials, .subscribe, .contact {
-    padding: 3em 0;
+    padding-top: 3em;
 }
 .about iframe { 
     border-width: 15px;
@@ -1178,6 +1240,11 @@ h3.w3title-agile {
 	height: 108px;
 	padding: 1em;
 }
+
+.contact{
+    margin-top: 3.5em;
+}
+
 .map-pos {
     left: 28%;
     width: 42%; 
@@ -1191,6 +1258,11 @@ h3.w3title-agile {
 	width: 165px;
 	height: 103px;
 }
+
+.contact{
+    margin-top: 3em;
+}
+
 .banner-text h2, .banner-text h3 {
     font-size: 3.5em;
 }
@@ -1226,8 +1298,18 @@ h3.w3title-agile {
     width: 40px;
     height: 40px;
 }
+
+
+.share a{
+    display: inline-block;
+    
+}
+
+.share a:first-of-type{
+    margin-right:10px;
+}
 .navbar-default .navbar-toggle {
-    border-color: #fff;
+    border-color: rgb(241, 12, 12);
 	margin: 2.4em 1em;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -1271,7 +1353,7 @@ div#bs-example-navbar-collapse-1 {
     letter-spacing: 3px;
 }
 .banner-text {
-    padding: 9em 0;
+
 }
 .about-agileits-w3layouts-right {
     padding-right: 2em;
@@ -1365,7 +1447,7 @@ div#bs-example-navbar-collapse-1 {
     margin: 2.2em 1em;
 }  
 .banner-text {
-    padding: 7em 0;
+
 }
 .banner-text h6 { 
     margin: 1em auto; 
@@ -1377,7 +1459,7 @@ div#bs-example-navbar-collapse-1 {
     width: 100%;
 }
 .welcome, .about, .services, .news, .gallery, .testimonials, .subscribe, .contact {
-    padding: 2.5em 0;
+    padding-top: 2.5em;
 }
 h3.w3title-agile {
     font-size: 3.5em;
@@ -1421,6 +1503,9 @@ h3.w3title-agile {
 .news-agileitsinfo {
     padding: 0;
 }
+.logo img{
+    width: 50px;
+}
 }
 @media(max-width:568px){
 .w3captn-agileits {
@@ -1432,6 +1517,9 @@ h3.w3title-agile {
 }
 .modal-dialog {
     width: 85%; 
+}
+.logo img{
+    width: 50px;
 }
 }
 @media(max-width:480px){
@@ -1504,6 +1592,9 @@ h3.w3title-agile {
 .subscribe form {
     margin: 1em 0;
 }
+.logo img{
+    width: 50px;
+}
 .map-pos {
     left: 17%;
     width: 65%;
@@ -1536,11 +1627,11 @@ ul.foo-nav li {
     font-size: 1.8em;
     letter-spacing: 2px;
 }
-.banner-text {
-    padding: 6em 0;
+.logo img{
+    width: 50px;
 }
 .welcome, .about, .services, .news, .gallery, .testimonials, .subscribe, .contact {
-    padding: 2em 0;
+    padding-top: 2em;
 }
 .welcome-img { 
     border: 4px solid #E4E4E4;
@@ -1737,9 +1828,7 @@ ul.foo-nav li {
 .logo h1 {
     margin: 0.3em 0 .1em;
 }
-.banner-text {
-    padding: 5em 0;
-}
+
 .banner-text h2, .banner-text h3 {
     font-size: 1.5em;
 }
@@ -1826,3 +1915,964 @@ h3.w3title-agile {
 }
 }
 /*-- //responsive-design --*/
+
+.brand .title{
+    font-size:44px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(183,136,103,1);
+    line-height:62px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 15px;
+}
+
+.brand .underline{
+    width: 60px;
+    height: 3px;
+    background: rgba(183,136,103,1);
+    margin:0 auto;
+    display: block;
+    margin-bottom: 60px;
+}
+
+.brand .des{
+    font-size:18px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(85,85,85,1);
+    line-height:29px;
+    text-align: center;
+}
+
+.brand .section{
+    margin-top: 60px;
+    font-size:18px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(34,34,34,1);
+    overflow: hidden;
+}
+
+.brand .section .w40{
+    width: 40%;
+}
+
+.brand .section .w60{
+    width: 57%;
+}
+
+.brand .section .leftS,.brand .section .rightS{
+    float: left;
+}
+
+.brand .section .titlePic{
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.brand .section .leftS{
+    margin-right: 30px;
+}
+
+.brand .section:last-of-type{
+    margin-bottom: 210px;
+}
+
+/* 品牌 */
+.reputation{
+    margin-bottom: 90px;
+}
+
+.reputation .conBox{
+    overflow: hidden;
+}
+
+.reputation .shop{
+    color: #fff;
+    background:rgba(183,136,103,1);
+    margin: 0 auto;
+    display: block;
+    font-size: 25px;
+    margin-top: 105px;
+    text-align: center;
+    width: 40%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.reputation .reBox{
+    background:rgba(244,244,244,1);;
+    padding:10px;
+    width: 30%;
+    margin-top: 60px;
+    margin-right: 3%;
+    float: left;
+}
+
+.reputation .reBox:nth-child(3n+3){
+    margin-right: 0;
+}
+
+.reputation .reBox:hover{
+    box-shadow: 0 18px 20px #00000025;
+}
+
+.reputation .reBox image{
+    width: 100%;
+}
+
+.reputation .reBox .user{
+    font-size:18px;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(183,136,103,1);
+    line-height:25px;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    border-bottom:1px solid rgba(220,220,220,1);
+}
+
+.reputation .reBox .txt{
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(105,105,105,1);
+    line-height:24px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+    .showT{
+        display: none;
+    }
+    .hideS{
+        display: block;
+    }
+
+
+@media(max-width:1366px){
+    .showT{
+        display: none;
+    }
+    .hideS{
+        display: block;
+    }
+}
+
+@media(max-width:1280px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+}
+
+@media(max-width:1080px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+}
+
+@media(max-width:1024px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+}
+
+@media(max-width:991px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+}
+
+@media(max-width:800px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+    .brand .title {
+        font-size: 2.5em;
+        font-family: PingFangSC-Medium,PingFang SC;
+        font-weight: 500;
+        color: rgba(183,136,103,1);
+        line-height: 62px;
+        text-align: center;
+        margin-top: 80px;
+        margin-bottom: 15px;
+    }
+    .contact .leftBox ul{
+        font-size: 0.8em;
+        text-align: center;
+    
+    }
+}
+
+@media(max-width:768px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+   
+    .contact .leftBox ul{
+        font-size: 0.8em;
+        text-align: center;
+    
+    }
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width:736px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.8em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+    
+    .contact .leftBox ul{
+        font-size: 0.8em;
+        text-align: center;
+    
+    }
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:667px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.5em;
+    }
+    .brand .section .secT{
+        margin-bottom: 1em;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.8em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+
+    .contact .leftBox ul{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:640px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:600px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:568px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:480px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    .hideS{
+        display: none;
+    }
+
+    .brand .des,.brand .section{
+        font-size: 1.3em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.6em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1.2em;
+    }
+
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+    .reputation .shop{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        width: auto;
+        margin-top: 1em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:414px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .contact .leftBox ul{
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .container .leftBox{
+        font-size: 1em;
+    }
+
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+
+    .reputation{
+        margin-bottom: 1em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        width: auto;
+        margin-top: 1em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:384px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    
+    .hideS{
+        display: none;
+    }
+    .brand .des,.brand .section{
+        font-size: 1em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .contact .leftBox ul{
+        font-size: 0.6em;
+        text-align: center;
+    }
+    .container .leftBox{
+        font-size: 1em;
+    }
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+
+    .reputation{
+        margin-bottom: 1em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        width: auto;
+        margin-top: 1em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:375px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+    
+    .hideS{
+        display: none;
+    }
+
+    .brand .des,.brand .section{
+        font-size: 1em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .contact .leftBox ul{
+        font-size: 0.6em;
+        text-align: center;
+    }
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1em;
+    }
+
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+
+    .reputation{
+        margin-bottom: 1em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        width: auto;
+        margin-top: 1em;
+    }
+    .share{
+        display: none;
+    }
+}
+
+@media(max-width:320px){
+    .brand .section .leftS,.brand .section .rightS{
+        width: 100%;
+    }
+    .brand .section .leftS{
+        margin-right: 0;
+    }
+    .showT{
+        display: block;
+    }
+
+    .hideS{
+        display: none;
+    }
+    .contact .leftBox ul{
+        font-size: 0.6em;
+        text-align: center;
+    }
+
+    .brand .des,.brand .section{
+        font-size: 1em;
+    }
+    .brand .section .secT{
+        margin-bottom: 0.5em;
+    }
+    .brand .title{
+        font-size: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 0;
+    }
+
+    .brand .underline{
+        margin-bottom: 1em;
+    }
+
+    .brand .section:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    .brand .section{
+        margin-top: 0.5em;
+    }
+
+    .contact .taobao{
+        font-size: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .container .leftBox{
+        font-size: 1em;
+    }
+
+    .reputation .conBox .reBox{
+        width: 100%;
+    }
+
+    .reputation{
+        margin-bottom: 1em;
+    }
+
+    .reputation .shop{
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        width: auto;
+        margin-top: 1em;
+    }
+
+    .share{
+        display: none;
+    }
+    
+}
+
+

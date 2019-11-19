@@ -155,9 +155,8 @@ html[xmlns] .flexslider .slides {
 .flex-control-nav {
     width: 100%;
     position: absolute;
-    bottom: -50%;
+    bottom: 0;
     text-align: center;
-	display: none;
 }
 .flex-control-nav li {
   margin: 0 6px;
@@ -184,7 +183,7 @@ html[xmlns] .flexslider .slides {
   background: #fff; 
 }
 .flex-control-paging li a.flex-active {
-  background: #FF9800;
+  background: #B78867;
   cursor: default;
 }
  
@@ -205,12 +204,12 @@ html[xmlns] .flexslider .slides {
 		right: 3%; 
 	}
 	.flex-control-nav { 
-		bottom: -59%; 
+		bottom: -3%; 
 	}
 }
 @media screen and (max-width: 768px) {
 .flex-control-nav {
-    bottom: -43%;
+    bottom: -3%;
 } 
 } 
 @media screen and (max-width: 480px) {
@@ -237,6 +236,6 @@ html[xmlns] .flexslider .slides {
     height: 40px; 
 }
 .flex-control-nav {
-    bottom: -55%;
+    bottom: -8%;
 }
 }

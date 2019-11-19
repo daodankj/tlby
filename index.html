@@ -1,8 +1,3 @@
-<?php
-require_once "jssdk.php";
-$jssdk = new JSSDK("wxe6ada8c3aae3c0ee", "d13a3343a7bd45b69a8c82ddeaa4785b");
-$signPackage = $jssdk->GetSignPackage();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,14 +34,13 @@ $signPackage = $jssdk->GetSignPackage();
 		font-size: 1.5rem;
 	}
 	.header {
-	   background-color: #fff;
+	   background-color:rgba(183,136,103,1);
 	}
 	.navbar-default .navbar-toggle .icon-bar {
 	    background-color: #c59474;
 	}
 	.navbar-default .navbar-toggle {
 	    border-color: #c59474;
-		margin: 2.4em 1em;
 	}
 	.welcome-img{
 		border: 0px;
@@ -67,11 +61,11 @@ $signPackage = $jssdk->GetSignPackage();
 <body> 
 	<!-- header -->
 	<div id="home" class="header">
-		<div class="container" style="height: 60px">
+		<div class="container">
 			<div class="header-nav">
 				<nav class="navbar navbar-default">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header" style="height: 60px">
+					<div class="navbar-header">
 					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="margin-top: 15px">
 						<span class="sr-only">Toggle navigation</span>
 						<span class="icon-bar"></span>
@@ -80,20 +74,25 @@ $signPackage = $jssdk->GetSignPackage();
 					  </button>
 						<div class="logo" style="width: 55px">
 							<!-- <h1><a class="navbar-brand" href="index.html"><span>M</span> <span>T</span> <span>J</span><br><i>Packers & Movers</i></a></h1> -->
-							<img src="/images/logo.png" height="55px" style=" margin-top: 2px">
+							<img src="images/logo.png" width="85px" style="margin-top:10px; margin-bottom:10px;">
 						</div>
 					</div> 
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1" style="background-color: #fff;">
-					 <ul class="nav navbar-nav">
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav" style="margin-top:20px;">
 						<li class="hvr-sweep-to-bottom active"><a href="index.html">首页</a></li>
-						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#about" class="scroll">产品视频</a></li>
-						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#welcome" class="scroll">品牌介绍</a></li>
-						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#services" class="scroll">产品简介</a></li>
-						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#gallery" class="scroll">关注我们</a></li> 
-						<li class="hvr-sweep-to-bottom"><a style="color: #000" href="#contact" class="scroll">防伪查询</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="pages/product.html" class="scroll">产品</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="pages/brand.html" class="scroll">品牌介绍</a></li>
+						<li class="hvr-sweep-to-bottom"><a href="pages/reputation.html" class="scroll">顾客口碑</a></li> 
+						<li class="hvr-sweep-to-bottom"><a href="#contact" class="scroll">联系我们</a></li>
 					  </ul>
+
+					  <div class="share" style="float: right;padding-top: 20px;margin-top: 15px;margin-bottom: 20px;">
+							<a href="https://weibo.com/p/1005057321234659/home?profile_ftype=1&is_all=1#_0"><img src="images/weibo.png" width="26" alt=""></a>
+							<!-- <a href="#"><img src="images/wechat.png" width="26" alt=""></a> -->
+						</div>
 					</div><!-- /.navbar-collapse -->
+					
 				</nav>
 			</div>
 		</div>
@@ -107,14 +106,10 @@ $signPackage = $jssdk->GetSignPackage();
 			<div class="flexslider">
 				<ul class="slides">
 					<li>
-						<h5>天灵宝燕</h5>
-						<h6>1</h6>
-						<h2>爱，让时光驻足</h2>
+						<img src="images/banner1.png" alt="" height="100%">
 					</li>
 					<li>
-						<h5>天灵宝燕</h5>
-						<h6>1</h6>
-						<h3>龄秘鲜炖燕窝</h3>
+						<img src="images/banner2.png" alt="" height="100%">
 					</li>
 				</ul>
 			</div>    
@@ -122,6 +117,13 @@ $signPackage = $jssdk->GetSignPackage();
 		<!-- //banner-text -->   
 	</div>
 	<!-- //banner -->
+
+	<div id="welcome" class="welcome" style="background-color: #ffffff">
+		<div class="container"> 
+			<img src="images/indexPic1.png" alt="" width="100%">
+		</div>
+	</div>
+
 	<!-- about -->
 	<div id="about" class="about" style="background-color: #ffffff;">
 		<div class="container">
@@ -149,138 +151,37 @@ $signPackage = $jssdk->GetSignPackage();
 	</div>
 	<!-- //about-->
 
-	<!-- welcome -->
 	<div id="welcome" class="welcome" style="background-color: #ffffff">
-		<div class="container"> 
-			<h3 class="w3title-agile">品牌介绍</h3> 
-			<div class="w3l-welcome-info">
-				<div class="col-sm-6 col-xs-6 welcome-grids">
-					<div class="welcome-img">
-						<img src="images/img1.jpg" class="img-responsive zoom-img" alt="">
-					</div>
-				</div>
-				<div class="col-sm-6 col-xs-6 welcome-grids">
-					<div class="welcome-img">
-						<img src="images/img2.jpg" class="img-responsive zoom-img" alt="">
-					</div>
-				</div>
-				<div class="clearfix"> </div>
+			<div class="container"> 
+				<img src="images/indexPic2.jpg" alt="" width="100%">
 			</div>
-			<div class="w3l-welcome-text">
-				<p style="text-align: left;">我们的灵感来自古人使用燕窝养生历史。燕窝是达官贵人的食品，到明代更列为宫廷御膳。明《本草纲目》记载，燕窝入肺生气、入肾滋水、入胃补脾、补而不燥。清康熙年的《调鼎集》记载的数十种“上席菜单”中，名列首位的就是燕窝。</p>
-
-				<p style="text-align: left;">我们的材料全部源于马来西亚。马来西亚地处印度洋和太平洋宽阔的海域，天然形成的热带雨林，常年雨水充沛，生物繁殖速度快，保证了金丝燕的食物供给。马来西亚的温度和湿度更适合金丝燕栖息，让燕子自由自在的快乐生活，才能产出最好的燕窝。</p>
-
-				<p style="text-align: left;">我们的产品理念，坚持使用原生态无污染的高级燕盏材料，确保每一盏都经过显微镜纯手工三挑三选古法挑毛工序，科学配比各营养成分保证每一瓶燕窝含量高达25%以上，拒绝制作过程使用添加剂，保证每一个成品都经过生产线超高温灭菌、全数控精准蒸煮，采用真空灌装，达到无菌标准，用心做出0添加承诺可以在常温保存的好吃燕窝。</p>
-
-				<p style="text-align: left;">我们的价值观：生命、美丽、爱。美丽的根本不需要修饰外在，而是身心愉悦的享受生活，发自内心的健康幸福的自然流露。</p>
-			</div>
-		</div>
 	</div>
-	<!-- //welcome -->
 	
-	<!-- services -->
-	<div id="services" class="welcome">
-		<div class="container"> 
-			<h3 class="w3title-agile">产品简介</h3> 
-			<div class="w3l-welcome-info">
-				<div class="col-sm-6 col-xs-6 welcome-grids">
-					<div class="welcome-img">
-						<img src="images/img3.jpg" class="img-responsive zoom-img" alt="">
-					</div>
+	<div id="contact" class="contact">
+			<div class="container"> 
+				<div class="taobao"><a href="https://item.taobao.com/item.htm?spm=a230r.1.14.16.78c32764kvfpPk&id=606549028784&ns=1&abbucket=18#detail">天灵宝燕电商平台：<img src="images/taobao.png" alt="" width="25">淘宝</a></div>
+				<div class="leftBox">
+					<ul>
+						<li>公司：广州凯盛嘉业网络科技有限公司</li>
+						<li> 电话：400-997-0088 </li>
+						<li> 地址：广州市海珠区艺苑路211号201、202铺</li>
+					</ul>
 				</div>
-				<div class="col-sm-6 col-xs-6 welcome-grids">
-					<div class="welcome-img">
-						<img src="images/img4.jpg" class="img-responsive zoom-img" alt="">
-					</div>
+				<div class="rightBox">
+					<ul>
+						<li><img src="images/code.png" alt="" width="70"><span style="display: block; font-size:18px;text-align: center;">官方微信</span></li>
+						<li><img src="images/sina.png" alt="" width="70"><span style="display: block; font-size:18px;text-align: center;">官方微博</span></li>
+					</ul>
 				</div>
-				<div class="clearfix"> </div>
 			</div>
-			<div class="w3l-welcome-text">
-				<p style="text-align: left;">燕窝中所含有的独特生物性活性蛋白分子，具有促进表皮细胞的再生；增加细胞诱发的免疫功能；增加个体对X放射线损害的抗御能力，这种活性蛋白质极易被人体吸收，燕窝既可调理人体内分泌，调节机能，也可强壮身体，滋润养颜，并可供给身体热量，促进脂肪代谢。</p>
-				<p style="text-align: left;">天灵宝燕即食燕窝，轻拧瓶盖，即可享受，营养美味，养颜更养人。</p><p style="text-align: left;">隐藏年龄的秘密武器，天灵宝燕·龄秘鲜炖燕窝就是这样的神奇，它可以将时间永远的定格在这一刻。</p>
-			</div>
-		</div>
 	</div>
-	<!-- //services -->
-	<!-- gallery -->
+
+
+
 	
-	<!-- //gallery --> 
-	<!-- news --> 
-	<div id="gallery" class="content-mid">
-		<img src="images/gzh.jpg" width="100%">
-		<div class="clearfix"></div>
-	</div>
-	<!-- //news -->
-	<!-- testimonials -->
-	<!-- <div id="news" class="testimonials">
-		<div class="container">
-			<h3 class="w3title-agile">我们的团队</h3> 
-			<div class="w3_testimonials_grids">
-				<section class="slider">
-					<div class="flexslider flexslider1">
-						<ul class="slides">
-							<li>	
-								<div class="w3_testimonials_grid">
-									<img src="images/1.png" alt=" " class="img-responsive" />
-									<h4><i>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil 
-										impedit quo minus id quod maxime placeat facere possimus, omnis voluptas.</i></h4>
-									<h5>John Frank</h5>
-									<p>Founder</p>
-								</div>
-							</li>
-							<li>	
-								<div class="w3_testimonials_grid">
-									<img src="images/2.png" alt=" " class="img-responsive" />
-									<h4><i>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil 
-										impedit quo minus id quod maxime placeat facere possimus, omnis voluptas.</i></h4>
-									<h5>Michael Doe</h5>
-									<p>Transport Agent</p>
-								</div>
-							</li>
-							<li>	
-								<div class="w3_testimonials_grid">
-									<img src="images/3.png" alt=" " class="img-responsive" />
-									<h4><i>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil 
-										impedit quo minus id quod maxime placeat facere possimus, omnis voluptas.</i></h4>
-									<h5>Thomas Carl</h5>
-									<p>Transport Agent</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</section>
-				 
-					<script type="text/javascript">
-					$(window).load(function(){
-					  $('.flexslider1').flexslider({
-						animation: "slide",
-						start: function(slider){
-						  $('body').removeClass('loading');
-						}
-					  });
-					});
-				  </script>
-				
-			</div>
-		</div>
-	</div> -->
-	<!-- //testimonials -->
-	<!-- news letter -->
-	<div id="contact" class="subscribe">
-		<div class="container">
-			<h3 class="w3title-agile2 wap">防伪查询</h3>
-			<p id="ReturnResult" style="font-size: 16px;"></p>
-			<!-- <div id="ReturnResult" style="font-size: 12px"> -->
-			<form onsubmit="return search();">
-				<input type="number" name="email" id="FwCode" placeholder="请输入防伪码查询" class="user" required="" style="border: 1px #ccc solid">
-				<input type="submit" id="btnQuery" value="马上查询">
-			</form>
-			<!-- <p class="spam">Copyright &copy; 2018.Company name All rights</p> -->
-		</div>
 
 	</div>
-	<p class="spam" style="text-align: center;">Copyright &copy; 2018. All rights  <a href="http://www.miitbeian.gov.cn">粤ICP备18016350号-1</a></p>
+	<p class="spam" style="padding:18px 0;text-align: center;background: rgba(183,136,103,1); color: #fff;">Copyright &copy; 2018. All rights  <a href="http://www.miitbeian.gov.cn" style="color:#fff;">粤ICP备18016350号-1</a></p>
 	
 	<!-- //modal-about -->     
 	<!-- js --> 
@@ -307,8 +208,8 @@ $signPackage = $jssdk->GetSignPackage();
 				$(".scroll").click(function(event){		
 					event.preventDefault();
 			
-			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-				});
+			// $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			// 	});
 			});
 	</script>
 	<!-- //end-smooth-scrolling -->	
